@@ -1,0 +1,8 @@
+{
+  "libraries": [
+    "./slices"
+  ],
+  "repositoryName": "flowrise-prismic-vue",
+  "adapter": "@slicemachine/adapter-nuxt",
+  "localSliceSimulatorURL": "http://127.0.0.1:3000/slice-simulator"
+}
