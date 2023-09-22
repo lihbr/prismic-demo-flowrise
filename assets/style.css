@@ -1,0 +1,23 @@
+.button {
+  @apply block w-fit bg-cyan-700 hover:bg-cyan-800 transition-colors duration-200 ease-in-out py-3 px-12 rounded-full font-display text-white font-bold text-base tracking-wider;
+}
+
+.heading {
+  @apply font-bold leading-tight tracking-tight font-display text-slate-700;
+}
+
+.heading--xl {
+  @apply text-5xl md:text-7xl;
+}
+
+.heading--lg {
+  @apply text-4xl md:text-5xl;
+}
+
+.heading--md {
+  @apply text-3xl md:text-4xl;
+}
+
+.heading--sm {
+  @apply text-2xl md:text-3xl;
+}

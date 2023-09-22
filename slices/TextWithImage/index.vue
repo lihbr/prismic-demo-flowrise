@@ -14,11 +14,30 @@ defineProps(
 </script>
 
 <template>
-  <section
+  <Bounded
     :data-slice-type="slice.slice_type"
     :data-slice-variation="slice.variation"
   >
-    Placeholder component for text_with_image (variation: {{ slice.variation }})
-    Slices
-  </section>
+    <div class="grid gap-8 md:grid-cols-2 place-items-center">
+      <PrismicImage
+        :field="slice.primary.image"
+        class="rounded-lg"
+        :class="{
+          'md:order-2': slice.variation === 'imageRight'
+        }"
+      />
+
+      <div class="space-y-4">
+        <PrismicText
+          wrapper="h2"
+          :field="slice.primary.heading"
+          class="heading heading--lg"
+        />
+        <PrismicRichText
+          :field="slice.primary.body"
+          class="max-w-md text-lg font-body text-slate-600"
+        />
+      </div>
+    </div>
+  </Bounded>
 </template>

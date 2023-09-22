@@ -6,24 +6,26 @@ export default defineNuxtConfig({
 
   app: {
     head: {
-      title: 'Prismic + Nuxt Minimal Starter',
+      title: 'Flowrise',
       htmlAttrs: {
         lang: 'en',
       },
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: '' },
+        { hid: 'description', name: 'description', content: 'Flowrise is the relaxing app for you.' },
         { name: 'format-detection', content: 'telephone=no' },
       ],
       link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
     }
   },
 
+  css: ['@fontsource-variable/nunito', '@fontsource-variable/nunito-sans', '~/assets/style.css'],
+
   modules: ['@nuxtjs/prismic', '@nuxtjs/tailwindcss'],
 
   prismic: {
-    endpoint: 'valliant-toast-ciy3gk',
+    endpoint: 'flowrise-prismic-vue',
     preview: '/api/preview',
     clientConfig: {
       routes: [
@@ -32,8 +34,7 @@ export default defineNuxtConfig({
           path: '/:uid',
         },
         {
-          type: 'page',
-          uid: 'home',
+          type: 'homepage',
           path: '/',
         },
       ]
