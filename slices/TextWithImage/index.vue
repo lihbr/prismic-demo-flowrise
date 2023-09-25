@@ -26,7 +26,6 @@ defineProps(
           'md:order-2': slice.variation === 'imageRight'
         }"
       />
-
       <div class="space-y-4">
         <PrismicText
           wrapper="h2"

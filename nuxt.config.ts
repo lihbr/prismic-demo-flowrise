@@ -25,7 +25,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/prismic', '@nuxtjs/tailwindcss'],
 
   prismic: {
-    endpoint: 'flowrise-prismic-vue',
+    endpoint: repositoryName,
     preview: '/api/preview',
     clientConfig: {
       routes: [
